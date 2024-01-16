@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {BiClipboard, BiHappyAlt , BiHomeAlt, BiUser} from 'react-icons/bi';
-import { BsClipboardData , BsBriefcase , BsChatSquare} from 'react-icons/bs';
+import { BsClipboardData , BsBriefcase , BsChatSquareText} from 'react-icons/bs';
 
  import { Link } from 'react-scroll';
 
@@ -11,20 +11,45 @@ const Nav = () => {
          {/* inner nav */}
          <div className='w-full bg-black/20 h-[66px] backdrop-blur-2xl 
          rounded-full max-w-[460px] mx-auto px-5 flex justify-between item-center text-2xl text-white/50'>
-         <Link className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center' >
+         <Link to='home'
+         activeClass='active'
+         smooth={true}
+         spy={true}
+
+         className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center' >
           <BiHomeAlt />
          </Link>
 
-         <Link className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
+         <Link to='about' 
+         activeClass='active'
+         smooth={true}
+         spy={true}
+         className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
           <BiUser />
          </Link>
 
-         <Link className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
+         <Link to='service'
+         activeClass='active'
+         smooth={true}
+         spy={true}
+         className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
           <BsClipboardData />
          </Link>
 
-         <Link  className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center' >
+         <Link to='work' 
+         activeClass='active'
+         smooth={true}
+         spy={true}
+         className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center' >
           <BsBriefcase></BsBriefcase>
+         </Link>
+
+         <Link to='contact' 
+         activeClass='active'
+         smooth={true}
+         spy={true}
+         className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center' >
+          <BsChatSquareText></BsChatSquareText>
          </Link>
 
          </div>
